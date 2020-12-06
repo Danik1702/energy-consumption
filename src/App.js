@@ -1,8 +1,18 @@
-import './App.css';
+import React from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+
+import { Landing } from "./screens";
+import { ROUTES } from "./assets";
 
 function App() {
   return (
-    <h1>Hi there! The new project.</h1>
+    <div>
+      <BrowserRouter>
+        <Switch>
+          <Route path={ROUTES.landing} exact component={Landing} />
+        </Switch>
+      </BrowserRouter>
+    </div>
   );
 }
 
