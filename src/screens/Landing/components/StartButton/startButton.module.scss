@@ -1,0 +1,23 @@
+.buttonContainer {
+  width: 100px;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(100, 251, 63);
+  background: radial-gradient(
+    circle,
+    rgba(100, 251, 63, 1) 0%,
+    rgba(70, 109, 252, 1) 100%
+  );
+  cursor: pointer;
+}
+
+.buttonText {
+  font-family: "Brush Script MT", cursive;
+  font-size: 20px;
+}

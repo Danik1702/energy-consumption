@@ -1,4 +1,6 @@
 .wrapper {
   min-height: 100vh;
   background: center / cover no-repeat url('../../assets/images/Landing1.jpg'), #000000;
+  display: flex;
+  justify-content: space-between;
 }
