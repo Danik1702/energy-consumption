@@ -29,10 +29,9 @@ export const Login = () => {
         <div className={styles.animatedBorderQuote}>
           <blockquote>
             <p>
-              The world always seems brighter when you’ve just made something
-              that wasn’t there before.
+              Якби не було електрики, ми б дивилися телевізор в темряві.
             </p>
-            <cite>Neil Gaiman</cite>
+            <cite>Муаммар Каддафи</cite>
           </blockquote>
         </div>
       </div>
