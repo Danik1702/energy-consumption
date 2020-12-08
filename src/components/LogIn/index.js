@@ -1,7 +1,16 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 
-import styles from './logIn.module.scss';
+import { ROUTES } from "../../assets";
+
+import styles from "./logIn.module.scss";
 
 export const LogIn = () => {
-  return <p className={styles.logInText}>Вхід</p>;
+  const history = useHistory();
+
+  return (
+    <p className={styles.logInText} onClick={() => history.push(ROUTES.login)}>
+      Вхід
+    </p>
+  );
 };
