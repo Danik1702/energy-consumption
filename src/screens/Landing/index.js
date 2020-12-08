@@ -7,8 +7,8 @@ import styles from './landing.module.scss';
 export const Landing = () => {
   return (
     <div className={styles.wrapper}>
-      <StartButton />
       <LogIn />
+      <StartButton />
     </div>
   );
 };

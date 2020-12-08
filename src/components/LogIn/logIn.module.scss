@@ -1,8 +1,23 @@
 .logInText {
+  height: 18px;
+  width: 50px;
   font-size: 14px;
   color: #ffffff;
   cursor: pointer;
-  border-top: 1px solid #cb3c34;
-  border-bottom: 1px solid #cb3c34;
-  padding: 5px 0;
+  padding: 5px 10px;
+  margin: 10px 20px 0 0;
+  font-weight: bold;
+  transition-duration: 3s;
+  text-align: center;
+  align-self: flex-end;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+
+  &:hover {
+      color: #cb3c34;
+      box-shadow: 0 0 20px 10px #cb3c34;
+  }
 }
