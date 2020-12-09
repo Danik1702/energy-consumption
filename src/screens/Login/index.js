@@ -11,6 +11,7 @@ import styles from "./login.module.scss";
 export const Login = () => {
   const history = useHistory();
   const googleProvider = new firebase.auth.GoogleAuthProvider();
+  const facebookProvider = new firebase.auth.FacebookAuthProvider();
 
   const handleGoogleLogin = () => {
     firebase
@@ -32,7 +33,22 @@ export const Login = () => {
   };
 
   const handleFacebookClick = () => {
-    console.log("FACEBOOK LOGIN");
+    firebase
+      .auth()
+      .signInWithPopup(facebookProvider)
+      .then((resp) => {
+        localStorage.setItem("token", resp.credential.accessToken);
+        localStorage.setItem(
+          "userName",
+          resp.additionalUserInfo.profile.first_name
+        );
+        localStorage.setItem(
+          "userPhoto",
+          resp.additionalUserInfo.profile.picture.data.url
+        );
+        history.push(ROUTES.dashboard);
+      })
+      .catch((error) => console.log(error));
   };
 
   return (
