@@ -1,0 +1,16 @@
+.container {
+  min-height: 100vh;
+  background: center / cover no-repeat url("../../assets/images/Landing2.jpg"),
+    #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 350px;
+  perspective-origin: 50% 50%;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
