@@ -3,7 +3,15 @@ import { useSpring, useSprings, animated, interpolate } from "react-spring";
 
 import styles from "./menuItem.module.scss";
 
-export const MenuItem = ({ background, boxShadow, borderRadius, itemOpacity, text }) => {
+export const MenuItem = ({
+  background,
+  boxShadow,
+  borderRadius,
+  itemOpacity,
+  text,
+  onClick,
+  defaultCursor,
+}) => {
   const [open, setOpen] = useState(false);
   const { f, r } = useSpring({ f: open ? 0 : 1, r: open ? -3 : 3 });
   const cards = useSprings(
@@ -22,7 +30,7 @@ export const MenuItem = ({ background, boxShadow, borderRadius, itemOpacity, tex
       {cards.map(({ z, opacity }, index) => (
         <animated.div
           key={index}
-          onClick={() => console.log("hi")}
+          onClick={onClick || (() => {})}
           style={{
             opacity: itemOpacity || opacity,
             background,
@@ -31,7 +39,8 @@ export const MenuItem = ({ background, boxShadow, borderRadius, itemOpacity, tex
               (z, f, r) => `translate3d(0,0,${z}px) rotateX(${f * r}deg)`
             ),
             boxShadow,
-            borderRadius, 
+            borderRadius,
+            cursor: defaultCursor ? "default" : "pointer",
           }}
         >
           <p className={styles.containerText}>{text}</p>
