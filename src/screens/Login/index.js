@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import firebase from "firebase";
 
 import { Google, Facebook } from "./components";
+import { GoBack } from '../../components';
 import { ROUTES } from "../../assets";
 import backArrow from "../../assets/icons/back-arrow-red.png";
 
@@ -54,10 +55,8 @@ export const Login = () => {
   return (
     <div className={styles.pageWrapper}>
       <div className={styles.leftSide}>
-        <img
-          src={backArrow}
-          alt="back-arrow"
-          className={styles.backIcon}
+        <GoBack 
+          isRed={true}
           onClick={() => history.goBack()}
         />
         <div className={styles.animatedBorderQuote}>

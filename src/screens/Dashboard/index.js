@@ -1,12 +1,21 @@
 import React from "react";
+import { useHistory } from 'react-router-dom';
 
 import { MenuItem } from "./components";
+import { LogIn, GoBack } from '../../components';
+import { ROUTES } from '../../assets';
 
 import styles from "./dashboard.module.scss";
 
 export const Dashboard = () => {
+  const history = useHistory();
+  
   return (
     <div className={styles.container}>
+      <GoBack 
+        onClick={() => history.push(ROUTES.landing)}
+      />
+      <LogIn />
       <div className={styles.menu}>
         <MenuItem
           background="#000000"
