@@ -1,7 +1,19 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
+
+import { GoBack, LogIn } from "../../components";
+import { Form } from './components';
 
 import styles from "./prognostication.module.scss";
 
 export const Prognostication = () => {
-  return <h1>Prognostication screen</h1>;
+  const history = useHistory();
+
+  return (
+    <div className={styles.container}>
+      <GoBack onClick={() => history.goBack()} />
+      <LogIn />
+      <Form />
+    </div>
+  );
 };
