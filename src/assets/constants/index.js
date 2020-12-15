@@ -9,3 +9,9 @@ export const ROUTES = {
   results: "results",
   prognosticationGraph: "prognostication-graph",
 };
+
+export const PROGNOSTICATION_DATA = {
+  oneLampPerDay: 0.08,
+  oneATypeMachine: 1.5,
+  oneBTypeMachine: 2.88,
+}
