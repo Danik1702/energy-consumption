@@ -6,8 +6,8 @@ export const ROUTES = {
   aboutEnergy: "/about-energy",
   prognostication: "/prognostication",
   usersResults: "/users-results",
-  results: "results",
-  prognosticationGraph: "prognostication-graph",
+  results: "/results",
+  prognosticationGraph: "/prognostication-graph",
 };
 
 export const PROGNOSTICATION_DATA = {

@@ -1,0 +1,51 @@
+.container {
+  width: 100%;
+  background-color: #333333;
+  border: 1px solid #333333;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  cursor: pointer;
+  margin-top: 30px;
+  padding: 10px 20px;
+  color: #ffffff;
+  box-sizing: border-box;
+  transition-duration: 2s;
+
+  &:hover {
+    background-color: #eeeeee;
+    color: #000000;
+    border-color: #4740d7;
+    box-shadow: 0 0 20px 2px #4740d7;
+  }
+}
+
+.textPairContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 7px;
+}
+
+.titleText {
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.prognosisPart {
+  margin-top: 20px;
+}
+
+.graphButton {
+  color: #4740d7;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+}
