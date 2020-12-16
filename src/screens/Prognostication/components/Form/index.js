@@ -3,12 +3,8 @@ import { useForm } from "react-hook-form";
 
 import styles from "./form.module.scss";
 
-export const Form = () => {
+export const Form = ({ onSubmit }) => {
   const { register, handleSubmit, errors } = useForm();
-
-  const onSubmit = (data) => {
-    console.log(data);
-  };
 
   return (
     <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
@@ -35,7 +31,7 @@ export const Form = () => {
         <label className={styles.formItemLabel}>Кількість цехів(1 - 20)</label>
         <input
           type="range"
-          name="department-count"
+          name="departmentCount"
           ref={register}
           min="1"
           max="20"
@@ -49,7 +45,7 @@ export const Form = () => {
           <input
             className={styles.formItem}
             ref={register}
-            name="a-type"
+            name="aType"
             placeholder="20..."
           />
         </div>
@@ -59,7 +55,7 @@ export const Form = () => {
           <input
             className={styles.formItem}
             ref={register}
-            name="b-type"
+            name="bType"
             placeholder="25..."
           />
         </div>

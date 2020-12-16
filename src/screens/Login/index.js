@@ -28,6 +28,7 @@ export const Login = () => {
           "userPhoto",
           resp.additionalUserInfo.profile.picture
         );
+
         history.push(ROUTES.dashboard);
       })
       .catch((error) => console.log(error));
