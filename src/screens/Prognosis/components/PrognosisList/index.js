@@ -10,6 +10,9 @@ export const PrognosisList = ({ items, isUser }) => {
       <h2 className={styles.header}>
         {isUser ? "Мої результати" : "Результати користувачів"}
       </h2>
+      {items.length === 0 && (
+        <p className={styles.emptyText}>Немає жодних результатів...</p>
+      )}
       <div className={styles.container}>
         {items.map((elem, index) => (
           <PrognosisItem

@@ -37,7 +37,10 @@ export const Prognosis = () => {
             items={allResults.filter((elem) => elem.name === userName)}
           />
         ) : (
-          <PrognosisList isUser={false} items={allResults} />
+          <PrognosisList
+            isUser={false}
+            items={allResults.filter((elem) => elem.name !== userName)}
+          />
         )}
       </div>
     </div>
